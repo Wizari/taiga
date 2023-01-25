@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-sign-up-page',
@@ -13,6 +13,9 @@ export class SignUpPageComponent {
     password1: new FormControl('123456'),
     password2: new FormControl('123456')
   });
+
+  readonly validator = Validators.email;
+
   // signUpForm = new FormGroup({
   //   login: new FormControl('i.simagin'),
   //   email: new FormControl('i.simagin@mail.com'),

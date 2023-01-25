@@ -1,0 +1,29 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <tui-input id="login" formControlName="login"
+  >
+    Login
+    <input
+      tuiTextfield
+      inputmode="numeric"
+    />
+  </tui-input>
+  <tui-input-password id="password" formControlName="password"
+  >
+    Password
+    <input
+      tuiTextfield
+      inputmode="numeric"
+    />
+  </tui-input-password>
+  <p></p>
+  <p></p>
+  <button
+    tuiButton
+    type="submit"
+    appearance="primary"
+    class="tui-space_right-3 tui-space_bottom-3"
+  >
+    Submit
+  </button>
+</form>
+

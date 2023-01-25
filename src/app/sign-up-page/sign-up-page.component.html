@@ -1,1 +1,46 @@
-<p>sign-up-page works!</p>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <tui-input id="login" formControlName="login"
+  >
+    Login
+    <input
+      tuiTextfield
+      inputmode="numeric"
+    />
+  </tui-input>
+
+  <tui-input id="email" formControlName="email"
+  >
+    Email
+    <input
+      tuiTextfield
+      inputmode="numeric"
+    />
+  </tui-input>
+
+  <tui-input-password id="password1" formControlName="password1"
+  >
+    Password
+    <input
+      tuiTextfield
+      inputmode="numeric"
+    />
+  </tui-input-password>
+
+  <tui-input-password id="password2" formControlName="password2"
+  >
+    Confirm Password
+    <input
+      tuiTextfield
+      inputmode="numeric"
+    />
+  </tui-input-password>
+
+  <button
+    tuiButton
+    type="submit"
+    appearance="primary"
+    class="tui-space_right-3 tui-space_bottom-3"
+  >
+    Submit
+  </button>
+</form>

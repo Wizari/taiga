@@ -10,7 +10,12 @@
       (click)="toggle(true)"
       (tuiActiveZoneChange)="toggle($event)"
     >
-      Show sidebar
+      <span class="main-menu-span">
+        Show sidebar
+      </span>
+      <svg class="main-menu-svg" >
+        <use style="" xlink:href="assets/taiga-ui/icons/tuiIconMenuLarge.svg#tuiIconMenuLarge"></use>
+      </svg>
       <!-- Nest the directive so it is considered the same active zone -->
 
     </button>
@@ -28,18 +33,8 @@
     </button>
   </tui-tabs>
 
-<!--  <app-authorization-page></app-authorization-page>-->
+  <!--  <app-authorization-page></app-authorization-page>-->
   <app-sign-up-page></app-sign-up-page>
-<!--  <button-->
-<!--    tuiButton-->
-<!--    type="button"-->
-<!--    (click)="toggle(true)"-->
-<!--    (tuiActiveZoneChange)="toggle($event)"-->
-<!--  >-->
-<!--    Show sidebar-->
-<!--    &lt;!&ndash; Nest the directive so it is considered the same active zone &ndash;&gt;-->
-
-<!--  </button>-->
 
   <div *tuiSidebar="open; direction: 'left'">
     <tui-accordion [rounded]="false">

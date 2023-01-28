@@ -1,27 +1,94 @@
 <tui-root>
 
-<!--  <app-authorization-page></app-authorization-page>-->
-  <app-sign-up-page></app-sign-up-page>
+<button
+  tuiButton
+  type="button"
+  (click)="toggle(true)"
+  (tuiActiveZoneChange)="toggle($event)"
+>
+  Show sidebar
+  <!-- Nest the directive so it is considered the same active zone -->
+  <div *tuiSidebar="open; direction: 'left'">
+    <tui-accordion [rounded]="false">
+      <tui-accordion-item borders="top-bottom">
+        Web APIs for Angular
+        <ng-template tuiAccordionItemContent>
+          <a
+            *ngFor="let link of webApis"
+            tuiLink
+            rel="noreferrer"
+            target="_blank"
+            href="https://github.com/ng-web-apis/{{ link }}"
+            class="link"
+          >
+            {{ link }}
+          </a>
+        </ng-template>
+      </tui-accordion-item>
+      <tui-accordion-item borders="top-bottom">
+        Other libraries
+        <ng-template tuiAccordionItemContent>
+          <a
+            *ngFor="let link of tinkoff"
+            tuiLink
+            target="_blank"
+            href="https://github.com/tinkoff/{{ link }}"
+            rel="noreferrer"
+            class="link"
+          >
+            {{ link }}
+          </a>
+        </ng-template>
+      </tui-accordion-item>
+    </tui-accordion>
+  </div>
+</button>
 
-  <!-- content of your app -->
-  <!--
-     If you need, you can add something between Taiga portal layers:
-    -->
-  <ng-container ngProjectAs="tuiOverContent">
-    <!-- Content over app content -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverDialogs">
-    <!-- Content over dialogs -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverAlerts">
-    <!-- Content over notifications -->
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverPortals">
-    <!-- Content over dropdowns -->
-
-  </ng-container>
-  <ng-container ngProjectAs="tuiOverHints">
-    <!-- Content over hints -->
-
-  </ng-container>
 </tui-root>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<tui-root>-->
+
+<!--&lt;!&ndash;  <app-authorization-page></app-authorization-page>&ndash;&gt;-->
+<!--  <app-sign-up-page></app-sign-up-page>-->
+
+<!--  &lt;!&ndash; content of your app &ndash;&gt;-->
+<!--  &lt;!&ndash;-->
+<!--     If you need, you can add something between Taiga portal layers:-->
+<!--    &ndash;&gt;-->
+<!--  <ng-container ngProjectAs="tuiOverContent">-->
+<!--    &lt;!&ndash; Content over app content &ndash;&gt;-->
+<!--  </ng-container>-->
+<!--  <ng-container ngProjectAs="tuiOverDialogs">-->
+<!--    &lt;!&ndash; Content over dialogs &ndash;&gt;-->
+<!--  </ng-container>-->
+<!--  <ng-container ngProjectAs="tuiOverAlerts">-->
+<!--    &lt;!&ndash; Content over notifications &ndash;&gt;-->
+<!--  </ng-container>-->
+<!--  <ng-container ngProjectAs="tuiOverPortals">-->
+<!--    &lt;!&ndash; Content over dropdowns &ndash;&gt;-->
+
+<!--  </ng-container>-->
+<!--  <ng-container ngProjectAs="tuiOverHints">-->
+<!--    &lt;!&ndash; Content over hints &ndash;&gt;-->
+
+<!--  </ng-container>-->
+<!--</tui-root>-->

@@ -7,9 +7,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TuiAlertModule, TuiButtonModule, TuiDialogModule, TuiRootModule} from "@taiga-ui/core";
 import { AuthorizationPageComponent } from './authorization-page/authorization-page.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {TuiValidatorModule} from "@taiga-ui/cdk";
-import {TuiInputModule, TuiInputPasswordModule} from '@taiga-ui/kit';
+import {TuiActiveZoneModule, TuiValidatorModule} from "@taiga-ui/cdk";
+import {TuiAccordionModule, TuiInputModule, TuiInputPasswordModule} from '@taiga-ui/kit';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import {TuiSidebarModule} from '@taiga-ui/addon-mobile';
 
 
 @NgModule({
@@ -30,6 +31,10 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     TuiValidatorModule,
     TuiInputModule,
     TuiInputPasswordModule,
+    TuiSidebarModule,
+    TuiActiveZoneModule,
+    TuiAccordionModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
